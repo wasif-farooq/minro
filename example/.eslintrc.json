@@ -1,28 +1,33 @@
 {
     "env": {
-        "browser": true,
+        "node": true,
         "es6": true
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:prettier/recommended"
     ],
     "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
+        "Atomics": "readonly"
     },
     "parser": "babel-eslint",
     "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 2019,
+        "ecmaVersion": 2020,
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "prettier"
     ],
     "rules": {
+        "prettier/prettier": [
+            "error", {
+                "trailingComma": "es5",
+                "singleQuote": true,
+                "semi": false,
+                "tabWidth": 4,
+                "parser": "flow"
+            }
+        ],
         "indent": [
             "error",
             4,
@@ -47,8 +52,5 @@
         ]
     },
     "settings": {
-        "react": {
-            "version": "^16.13.1"
-        }
     }
 }
