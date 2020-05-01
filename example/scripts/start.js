@@ -27,7 +27,7 @@ thread = spawn('node', [paths.appBuild + '/index.js'], {
     detached: true
     //stdio: [ 'ignore', out, err ]
 });
-process.exit(0);
+//process.exit(0);
 /*thread.stdout.on('data', data => console.log(data.toString()));
 thread.stdout.on('message', data => console.log(data.toString()));
 thread.stderr.on('data', data => console.warn(data.toString()));

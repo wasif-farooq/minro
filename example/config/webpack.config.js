@@ -106,6 +106,7 @@ module.exports = function (webpackEnv) {
         },
         externals: [nodeExternals()],
         plugins: [
+            new webpack.DefinePlugin(env.stringified),
             isEnvDevelopment && new webpack.HotModuleReplacementPlugin(),
             isEnvDevelopment && new CaseSensitivePathsPlugin(),
         ].filter(Boolean)

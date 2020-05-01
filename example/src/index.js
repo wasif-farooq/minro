@@ -1,10 +1,10 @@
 import http from 'http';
 
 const Server = () => {
-    console.log("NODE_APP_DATA_URL : ", process.env.NODE_APP_DATA_URL)
     const server = http.createServer(function(req, res) {
         console.log("get the request asd asasdasdsad show");
-        res.end('hello world');
+        //console.log("NODE_APP_DATA_URL : ", process.env.NODE_APP_DATA_URL)
+        res.end('hello world' + process.env.NODE_APP_DATA_URL);
     });
 
     server.listen(4002, () => {
