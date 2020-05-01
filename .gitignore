@@ -1,4 +1,9 @@
+.idea
 node_modules
 coverage
 .temp
+build
+dist
 .env.local
+*.0x
+coverage

@@ -5,14 +5,20 @@
   "author": "Wasif Farooq",
   "license": "MIT",
   "scripts": {
-    "start": "node ./dist",
+    "start": "node ./build",
+    "start:profiling": "0x -o -- yarn start",
     "start:dev": "node ./scripts/dev.js",
     "build": "node ./scripts/build.js",
     "lint": "eslint --fix ./src/**/*.js",
+    "make": "babel src -d lib",
     "test": "jest",
-    "test:lint": "eslint --fix ./tests/**/*.js"
+    "test:lint": "eslint --fix ./tests/**/*.js",
+    "pre:push": "yarn lint && yarn test",
+    "pre:deploy": "yarn lint && yarn test && yarn build",
+    "pre:publish": "yarn lint && yarn test && yarn make"
   },
   "devDependencies": {
+    "0x": "^4.9.1",
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.6",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
@@ -26,8 +32,9 @@
     "babel-loader": "^8.1.0",
     "babel-minify": "^0.5.1",
     "babel-plugin-add-module-exports": "^1.0.2",
-    "babel-plugin-minify-simplify": "^0.5.1",
+    "babel-preset-minify": "^0.5.1",
     "babel-register": "^6.26.0",
+    "dotenv": "^8.2.0",
     "dotenv-expand": "^5.1.0",
     "eslint": "^6.8.0",
     "eslint-config-node": "^4.0.0",
@@ -42,7 +49,5 @@
     "webpack-merge": "^4.2.2",
     "webpack-node-externals": "^1.7.2"
   },
-  "dependencies": {
-    "dotenv": "^8.2.0"
-  }
+  "dependencies": {}
 }

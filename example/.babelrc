@@ -7,7 +7,8 @@
                     "node": "10"
                 }
             }
-        ]
+        ],
+        "minify"
     ],
     "plugins": [
         "@babel/plugin-proposal-class-properties",
@@ -15,7 +16,6 @@
         "@babel/plugin-syntax-dynamic-import",
         "@babel/plugin-proposal-export-namespace-from",
         "@babel/plugin-proposal-throw-expressions",
-        "add-module-exports",
-        "minify-simplify"
+        "add-module-exports"
     ]
 }

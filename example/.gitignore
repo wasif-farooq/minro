@@ -5,3 +5,5 @@ coverage
 build
 dist
 .env.local
+*.0x
+coverage
