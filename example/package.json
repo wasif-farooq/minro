@@ -5,10 +5,9 @@
   "author": "Wasif Farooq",
   "license": "MIT",
   "scripts": {
-    "start": "node ./dist/index.js",
-    "start:dev": "webpack --config=webpack/webpack.config.production.js --watch",
-    "build": "webpack --config=webpack/webpack.config.production.js",
-    "dev": "node ./scripts/dev.js",
+    "start": "node ./scripts/start.js",
+    "start:dev": "node ./scripts/dev.js",
+    "build": "node ./scripts/build.js",
     "lint": "eslint --fix ./src/**/*.js",
     "test": "jest",
     "test:lint": "eslint --fix ./tests/**/*.js"

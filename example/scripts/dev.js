@@ -7,7 +7,7 @@ require('../config/env');
 
 const webpack = require('webpack');
 const webpackConfig = require('../config/webpack.config');
-const { exec, execSync, spawn } = require('child_process');
+const { spawn } = require('child_process');
 const config = webpackConfig(process.env.NODE_ENV || 'development');
 let thread = false;
 const compiler = webpack(config);

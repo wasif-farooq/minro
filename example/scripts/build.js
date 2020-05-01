@@ -1,30 +1,12 @@
+'use strict';
+
+process.env.BABEL_ENV = 'production';
+process.env.NODE_ENV = 'production';
+
+require('../config/env');
+
 const webpack = require('webpack');
-const config = require('../webpack/webpack.config.production');
-const { exec, execSync } = require('child_process');
-let pid = false;
+const webpackConfig = require('../config/webpack.config');
+const config = webpackConfig(process.env.NODE_ENV || 'development');
 const compiler = webpack(config);
-
-
-compiler.watch({
-    aggregateTimeout: 300
-}, (err, stats) => {
-
-    if (pid) {
-        pid.emit('exit');
-    }
-
-    pid = exec('node -v', function (error, stdout, stderr) {
-        if (error) {
-            console.log(error.stack);
-            console.log('Error code: '+error.code);
-            console.log('Signal received: '+error.signal);
-        }
-        console.log('Child Process STDOUT: '+stdout);
-        console.log('Child Process STDERR: '+stderr);
-    });
-
-    pid.on('exit', function (code) {
-        console.log('Child process exited with exit code '+code);
-    });
-
-})
+compiler.run();
