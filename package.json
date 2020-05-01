@@ -1,0 +1,25 @@
+{
+  "name": "minro",
+  "version": "1.0.0",
+  "description": "This package provide the cli to generate node project with es6 support",
+  "main": "src/index.js",
+  "author": "Wasif Farooq",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-loader": "^8.1.0",
+    "case-sensitive-paths-webpack-plugin": "^2.3.0",
+    "eslint": "^6.8.0",
+    "eslint-config-node": "^4.0.0",
+    "husky": "^4.2.5",
+    "jest": "^25.5.2",
+    "source-map-support": "^0.5.19",
+    "terser-webpack-plugin": "^2.3.6",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
