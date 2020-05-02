@@ -83,3 +83,6 @@ npm test
 // using yarn
 yarn test
 ```
+
+### License
+MIT
