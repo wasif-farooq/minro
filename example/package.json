@@ -4,6 +4,9 @@
   "main": "src/index.js",
   "author": "Wasif Farooq",
   "license": "MIT",
+  "files": [
+    "lib/"
+  ],
   "scripts": {
     "start": "node ./build",
     "start:profiling": "0x -o -- yarn start",
