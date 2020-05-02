@@ -3,6 +3,7 @@ node_modules
 coverage
 .temp
 build
+lib
 dist
 .env.local
 *.0x
